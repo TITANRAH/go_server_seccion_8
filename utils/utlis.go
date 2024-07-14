@@ -10,6 +10,7 @@ var Frontend string = "templates/layout/frontend.html"
 
 var Store = sessions.NewCookieStore([]byte("session-name"))
 
+// aqui mando el mennsaje en estsa funciuon que retorna dos strings
 func RetornarMensajesFlash(response http.ResponseWriter, request *http.Request) (string, string) {
 	session, _ := Store.Get(request, "flash-session")
 

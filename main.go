@@ -22,6 +22,9 @@ func main() {
 	// formularios rutas
 	mux.HandleFunc("/formularios", routes.Formularios_get)
 	mux.HandleFunc("/formularios-post", routes.Formularios_post).Methods("POST")
+	mux.HandleFunc("/formularios/upload", routes.Formularios_upload)
+	mux.HandleFunc("/formularios/upload-post", routes.Formularios_upload_post).Methods("POST")
+
 
 	
 	// archivos estaticos hacia mux con esta config reconocera recursos estaticos

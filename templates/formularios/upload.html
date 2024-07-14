@@ -1,0 +1,42 @@
+{{template "header"}}
+
+<!-- contenido -->
+<main class="container">
+  <h1>Upload</h1>
+<!-- si .css es distitnto de vacio -->
+  {{if ne .css " "}}
+  <div class="alert alert-{{.css}} alert-dissmisible fade show">
+  {{.mensaje}}
+
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+
+  </button>
+  </div>
+  {{end}}
+
+  <div>
+    <form action="/formularios/upload-post" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label for="foto">Foto:</label>
+        <input
+          type="file"
+          name="foto"
+          id="foto"
+          class="form-control"
+        />
+      </div>
+     
+
+      <hr />
+
+      <input
+        type="submit"
+        value="Enviar"
+        title="Enviar"
+        class="btn btn-primary"
+      />
+    </form>
+  </div>
+</main>
+<!-- contenido -->
+{{template "pie"}}
