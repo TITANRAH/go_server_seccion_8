@@ -1,0 +1,61 @@
+{{template "header"}}
+<main class="container">
+  <h1>Estructuras</h1>
+  <h2>Declaracion de variables</h2>
+  {{with $valor:="Mi valor con ñandu"}}
+  <p>{{$valor}}</p>
+  {{end}}
+
+  <span>----------------------------------------------</span>
+  <h2>Valores desde struct</h2>
+  <ul>
+    <li>Nombre: {{.Nombre}}</li>
+    <li>Edad: {{.Edad}}</li>
+    <li>Perfil: {{.Perfil}}</li>
+  </ul>
+
+  <span>----------------------------------------------</span>
+
+  <!-- 
+    
+    Operadores logicos
+
+    not !
+    and &&
+    or ||
+    
+    Operadores condicionales
+    
+     eq ==
+     ne !=
+     lt <
+     le <=
+     gt >
+     ge >=
+    
+    -->
+  <h2>Condiciones</h2>
+
+  {{if ge .Edad 18}}
+  <p>Eres mayor de edad</p>
+
+  {{else}}
+  <p>Eres menor de edad</p>
+  {{end}} {{if eq .Perfil 1}}
+  <p>Eres admin</p>
+  {{else}}
+  <p>Tienes otro perfil</p>
+  {{end}}
+
+  <span>----------------------------------------------</span>
+
+  <h2>Iteraciones</h2>
+
+  <ul>
+    {{range .Habilidades}}
+    <li>{{.Nombre}}</li>
+    {{end}}
+  </ul>
+</main>
+
+{{template "pie"}}

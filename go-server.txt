@@ -1,0 +1,14 @@
+"github.com/gorilla/mux"
+	"github.com/joho/godotenv"
+
+    go get
+
+
+fresh
+
+go get github.com/pilu/fresh
+
+
+asi hecho andar fresh 
+
+go run github.com/pilu/fresh
