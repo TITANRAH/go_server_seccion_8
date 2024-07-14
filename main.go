@@ -46,7 +46,7 @@ func main() {
 	}
 
 	server := &http.Server{
-		Addr:         "goserverseccion8-production.up.railway.app",
+		Addr:         "localhost:" + os.Getenv("PORT"),
 		Handler:      mux,
 		WriteTimeout: 15 * time.Second,
 		ReadTimeout:  15 * time.Second,
